@@ -254,3 +254,12 @@ section > p{
             display: flex;
     }
 }
+.format-table-h3{
+    font-size: 1.8rem;
+    color: var(--tex-color);
+}
+.format-1{
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    color: var(--tex-color);
+}
