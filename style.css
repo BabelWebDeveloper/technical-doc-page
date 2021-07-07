@@ -166,7 +166,8 @@ h1{
     display: none;
 }
 #night-mode:checked ~ header,
-#night-mode:checked ~ main{
+#night-mode:checked ~ main,
+#night-mode:checked ~ main::before{
     filter: invert(100%);
 }
 .div-night-mode{
@@ -231,10 +232,12 @@ section > p{
 @media only screen and (min-width:1000px){
     header{
         width: 30%;
+        height: 100%;
+        justify-content: start;
     }
     nav{
         display: flex;
-        height: 200px;
+        height: 100%;
     }
     .div-toggle{
         display: none;
@@ -246,5 +249,8 @@ section > p{
         width: 65%;
         float: right;
         top: 0;
+    }
+    .empty-div{
+            display: flex;
     }
 }
