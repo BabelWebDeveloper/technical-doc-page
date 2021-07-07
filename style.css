@@ -1,0 +1,205 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+a{
+    text-decoration: none;
+}
+/*main code*/
+:root{
+    --tex-color: #006600;
+    --bgc: #FFFFCC;
+}
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--tex-color);
+    box-sizing: border-box;
+    color: var(--tex-color);
+    background-color: var(--bgc);
+    position: fixed;
+}
+h1{
+    font-size: 2.4rem;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.control-panel{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.div-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid var(--tex-color);
+    border-right: 1px solid var(--tex-color);
+}
+.div-toggle > label{
+    font-size: 40px;
+}
+#toggle{
+    display: none;
+}
+#night-mode{
+    display: none;
+}
+#night-mode:checked ~ header{
+    filter: invert(100%);
+}
+.div-night-mode{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid var(--tex-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-night-mode > label{
+    font-size: 40px;
+}
+nav{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+    border-top: 1px solid var(--tex-color);
+}
+nav > a{
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+    color: var(--tex-color);
+    border-bottom: 1px solid;
+}
+nav > a:last-child{
+    border-bottom: none;
+}
+#toggle:checked ~ header > nav{
+    display: flex;
+}
