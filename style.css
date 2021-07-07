@@ -131,17 +131,17 @@ header{
     color: var(--tex-color);
     background-color: var(--bgc);
     position: fixed;
+    z-index: 2;
 }
 h1{
     font-size: 2.4rem;
-    height: 50%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .control-panel{
     width: 100%;
-    height: 50%;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -165,7 +165,8 @@ h1{
 #night-mode{
     display: none;
 }
-#night-mode:checked ~ header{
+#night-mode:checked ~ header,
+#night-mode:checked ~ main{
     filter: invert(100%);
 }
 .div-night-mode{
@@ -202,4 +203,27 @@ nav > a:last-child{
 }
 #toggle:checked ~ header > nav{
     display: flex;
+}
+main{
+    position: relative;
+    top: 93px;
+    padding: 0 3rem;
+    background-color: var(--bgc);
+    z-index: 1;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section > h2{
+    font-size: 2.4rem;
+    margin: 1rem 0;
+    color: var(--tex-color);
+}
+section > p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--tex-color);
 }
