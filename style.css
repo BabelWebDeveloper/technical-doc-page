@@ -216,6 +216,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 3rem;
 }
 section > h2{
     font-size: 2.4rem;
@@ -226,4 +227,24 @@ section > p{
     font-size: 1.6rem;
     line-height: 2rem;
     color: var(--tex-color);
+}
+@media only screen and (min-width:1000px){
+    header{
+        width: 30%;
+    }
+    nav{
+        display: flex;
+        height: 200px;
+    }
+    .div-toggle{
+        display: none;
+    }
+    .div-night-mode{
+        width: 100%;
+    }
+    main{
+        width: 65%;
+        float: right;
+        top: 0;
+    }
 }
